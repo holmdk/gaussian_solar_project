@@ -1,9 +1,16 @@
+import matplotlib
+
+matplotlib.rcParams.update({'font.size': 16})
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
 from matplotlib import cm
 from mpl_toolkits.mplot3d import Axes3D
+
+
+
 
 def nc_to_pd(data, name=None, save=True, save_folder=None):
     data = data.to_dataframe()
