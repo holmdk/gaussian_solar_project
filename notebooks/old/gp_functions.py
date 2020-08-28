@@ -43,7 +43,7 @@ def fit_predictive_GP(X, y, Xtest, lengthscale, kernel_variance, noise_variance)
 
     v = np.linalg.solve(L, Ks)
     # compute the variance at our test points.
-    Kss = kernel(Xtest, Xtest, lengthscale, kernel_variance)
+    Kss = squared_exponential_kernel(Xtest, Xtest, lengthscale, kernel_variance)
     covariance = Kss - (v.T @ v)
 
     return mu, covariance
