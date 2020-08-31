@@ -19,7 +19,7 @@ import torch
 import gpytorch
 from matplotlib import pyplot as plt
 
-test = False
+test = True
 
 
 def nc_to_pd(data, name=None, save=True, save_folder=None):
